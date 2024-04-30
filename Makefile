@@ -58,6 +58,7 @@ xcbeautify:
 	cd .build/checkouts/xcbeautify && make build
 	binpath=`cd .build/checkouts/xcbeautify && swift build -c release --show-bin-path` && ln -sf $$binpath/xcbeautify
 
+
 docker-build: version
 	docker build -t $(DOCKER_IMAGE):$(VERSION) .
 
